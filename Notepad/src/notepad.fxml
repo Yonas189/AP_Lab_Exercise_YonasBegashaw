@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="notepad.NotepadController" prefHeight="600" prefWidth="900">
+
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem fx:id="menuNew" text="New"/>
+                <MenuItem fx:id="menuOpen" text="Open..."/>
+                <MenuItem fx:id="menuSave" text="Save"/>
+                <MenuItem fx:id="menuSaveAs" text="Save As..."/>
+                <SeparatorMenuItem/>
+                <MenuItem fx:id="menuExit" text="Exit"/>
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem fx:id="menuCut" text="Cut"/>
+                <MenuItem fx:id="menuCopy" text="Copy"/>
+                <MenuItem fx:id="menuPaste" text="Paste"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextArea fx:id="textArea" wrapText="true"/>
+    </center>
+
+    <bottom>
+        <VBox>
+            <padding><Insets top="6" right="10" bottom="6" left="10"/></padding>
+            <Label fx:id="statusLabel" text="Untitled"/>
+        </VBox>
+    </bottom>
+</BorderPane>
